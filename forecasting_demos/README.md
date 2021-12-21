@@ -17,10 +17,28 @@ This library uses the public NYC Taxi rides dataset.
 
 - Raw data hosted publicly by AWS:  https://registry.opendata.aws/nyc-tlc-trip-records-pds/
 
-- Public data used in notebooks is in the github /data folder of same repository
+- 8 months of cleaned data in this repo under folder data/
 
   
 
+### Notebooks
+
+------
+
+Each notebook can be run in 2 ways.  Change the variables in the notebook and then run either the local or cloud parts.  The "SMALL" and "MEDIUM" versions of the notebooks show example timings.
+
+Suggested - copy the notebooks - run the copy.  That way you'll keep the original outputs for reference.
+
+| Description                                                  | Instructions                          | Notebook                                                     |
+| ------------------------------------------------------------ | ------------------------------------- | ------------------------------------------------------------ |
+| **ARIMA** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Original data 260 items, 2 data points forecast horizon.** | Change the variables in the notebook. | [Link to notebook](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/nyctaxi_arima_simple_SMALL_data.ipynb) |
+| **ARIMA** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Fake data 2860 items, 2 data points forecast horizon.** | Change the variables in the notebook. | [Link to notebook](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/nyctaxi_arima_simple_MEDIUM_data.ipynb) |
+| **Prophet** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Original data 260 items, 2 data points forecast horizon.** | Change the variables in the notebook. | [Link to notebook](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/nyctaxi_prophet_simple_SMALL_data.ipynb) |
+| **Prophet** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Fake data 2860 items, 2 data points forecast horizon.** | Change the variables in the notebook. | [Link to notebook](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/nyctaxi_prophet_simple_MEDIUM_data.ipynb) |
+| **Pytorch Lightning** Deep Learning notebook operational forecasting number of rides at each location in the next week at hourly granularity.  **Original data 260 items, 24 * 7 = 168 data points forecast horizon.** | Change the variables in the notebook. | [Link to notebook](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/pytorch_forecasting_ray_local.ipynb) |
+| **Tensorflow2** Distributed Deep Learning notebook operational forecasting number of rides at each location in the next week at hourly granularity.  **Original data 260 items, 24 * 7 = 168 data points forecast horizon.** |                                       | coming soon                                                  |
+
+  
 ### Installation
 
 ------
@@ -34,13 +52,13 @@ To install Anyscale:  `pip install -U anyscale`
 
 To install Prophet from scratch, install libraries in this order:
 
-1. `conda install -y llvmlite`
-1. `pip install kats`
-3. If you get error about numpy version, `conda uninstall -y numpy`
-3. Try pip install kats again to verify required numba version.  `conda install -y numba=0.52.0`  
-3. `conda install -y scipy`
-3. `conda install -c conda-forge statsmodels`
-4. `pip install kats`
+1. conda install -y llvmlite
+2. pip install kats
+3. If you get error about numpy version, conda uninstall -y numpy
+4. Try pip install kats again to verify required numba version. conda install -y numba=0.52.0
+5. conda install -y scipy
+6. conda install -c conda-forge statsmodels
+7. pip install kats
 
 To install ARIMA from scratch, install libraries in this order:
 
@@ -82,25 +100,4 @@ Uses a [Ray local server](https://docs.ray.io/en/latest/walkthrough.html) to aut
 Run everything in the notebook up to, but not including the Ray local server part, then run the cloud part.
 
 Uses [Anyscale](https://docs.anyscale.com/) to automatically start a cloud cluster, auto-scale, handle CUDA whether or not GPU are available, and automatically shuts down the cloud cluster.
-
-
-
-### Notebooks
-
-------
-
-Each notebook can be run in 2 ways.  Change the variables in the notebook and then run either the local or cloud parts.  
-
-Suggestion: Copy the notebooks.  Make edits and run the copy.  That way you'll keep the original outputs for reference.
-
-| Description                                                  | Notebook                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **ARIMA** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Original data 260 items, 2 data points forecast horizon.** | [ Link to notebook  ](https://github.com/anyscale/demos/blob/master/forecasting_demo/nyctaxi_arima_simple_SMALL_data.ipynb) |
-| **ARIMA** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Fake data 2860 items, 2 data points forecast horizon.** | [  Link to notebook  ](https://github.com/anyscale/demos/blob/master/forecasting_demo/nyctaxi_arima_simple_MEDIUM_data.ipynb) |
-| **Prophet** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Original data 260 items, 2 data points forecast horizon.** | [  Link to notebook  ](https://github.com/anyscale/demos/blob/master/forecasting_demo/nyctaxi_prophet_simple_SMALL_data.ipynb) |
-| **Prophet** strategic forecasting number of rides at each location in the next 2 months at monthly granularity. **Fake data 2860 items, 2 data points forecast horizon.** | [  Link to notebook  ](https://github.com/anyscale/demos/blob/master/forecasting_demo/nyctaxi_prophet_simple_MEDIUM_data.ipynb) |
-| **Pytorch Lightning** Deep Learning notebook operational forecasting number of rides at each location in the next week at hourly granularity.  **Original data 260 items, 24 * 7 = 168 data points forecast horizon.** | coming soon                                                  |
-| **Tensorflow2** Distributed Deep Learning notebook operational forecasting number of rides at each location in the next week at hourly granularity.  **Original data 260 items, 24 * 7 = 168 data points forecast horizon.** | coming soon                                                  |
-
-
 
