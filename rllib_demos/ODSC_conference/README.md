@@ -16,19 +16,19 @@ conda install -y tensorflow  # either version works!
 pip install torch gputil  # any latest version works!
 pip install "ray[default]"  # updates ray dashboard
 
-# Mac - see extra install notes below
-# Win10 - see extra install notes below
+# Win10 only  - required extra step
+$ pip install pywin32  # <- Win10 only
+
+# Mac - see possible extra install notes below
 
 $ git clone https://github.com/christy/AnyscaleDemos
 $ cd rllib_demos/ODSC_conference
 $ jupyter-lab
 ```
 
-##### Mac only
-$ pip install grpcio  
-Note: In case you are getting a "requires TensorFlow version >= 2.8" error at some point in the notebook, try the following: <br>
+##### Mac only - potential extra steps
+$ conda install grpcio  <br>
+
+In case you are getting a "requires TensorFlow version >= 2.8" error at some point in the notebook, try the following: <br>
 $ pip uninstall -y tensorflow <br>
 $ python -m pip install tensorflow-macos --no-cache-dir
-
-##### Win10 only
-$ pip install pywin32  # <- Win10 only
