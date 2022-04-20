@@ -4,9 +4,9 @@
 
 You can run the tutorial notebook either: <br>
 
-Option #1.  As a Colab (all the software dependencies installed for you but runs more slowly). <br>
+Option #1.  Run the .ipynb as a Colab. This is easiest but the tutorial will run more slowly.<br>
 
-Option #2. From your own local development environment that you need to create yourself. <br>
+Option #2. Run the .ipynb in your own local development environment that you need to create yourself. You'll also need to download from github this .ipynb.<br>
 <br>
 
 #### Option #1. Run tutorial from Colab
