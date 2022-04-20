@@ -1,26 +1,42 @@
 # ODSC Conference April, 2022
 
-## Quick setup instructions:
+## Tutorial setup instructions:
+
+You can run the tutorial notebook either: <br>
+
+Option #1.  As a Colab (all the software dependencies installed for you but runs more slowly). <br>
+
+Option #2. From your own local development environment that you need to create yourself. <br>
+<br>
+
+#### Option #1. Run tutorial from Colab
+
+Click https://colab.research.google.com/github/christy/AnyscaleDemos/blob/main/rllib_demos/ODSC_conference/tutorial_notebook.ipynb
+<br>
+<br>
+
+
+#### Option #2. Conda install RLlib environment for tutorial (more setup steps but tutorial runs quicker)
 
 #### 1. Install Conda if needed
 https://www.anaconda.com/products/individual <br>
 $ conda env list  # list conda envs <br>
-<br>
 
-#### 2. Conda install RLlib environment for tutorial
+#### 2. Create conda env and install the libraries below
 ```
 $ conda create -yn rllib_tutorial python=3.9
 $ conda activate rllib_tutorial
 $ pip install jupyterlab "ray[rllib,serve,tune]" sklearn
-conda install -y tensorflow  # either version works!
-pip install torch gputil  # any latest version works!
-pip install "ray[default]"  # updates ray dashboard
+$ conda install -y tensorflow  # either version works!
+$ pip install recsim torch gputil  # any latest version works!
+$ pip install "ray[default]"  # updates ray dashboard
 
 # Win10 only  - required extra step
 $ pip install pywin32  # <- Win10 only
 
 # Mac - see possible extra install notes below
 
+# Now run the tutorial notebook locally
 $ git clone https://github.com/christy/AnyscaleDemos
 $ cd rllib_demos/ODSC_conference
 $ jupyter-lab
