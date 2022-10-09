@@ -1,6 +1,5 @@
-"""Utilities for SSML Dataset, Trainers, Tune demo
-"""
 from typing import Tuple
+import random
 import ray
 from ray.data import Dataset
 # import pyarrow as pa  #is something else overwriting pa?
@@ -14,7 +13,7 @@ def pushdown_read_data(files_list: list,
 
     Args:
         files_list (list): list of files
-        sample_ids (list): list of sampling ids
+        sample_ids (list): list of ids for sampling
 
     Returns:
         Dataset: Ray Dataset data
@@ -93,3 +92,24 @@ def prepare_data(files_list: list,
     return train_dataset, valid_dataset, test_dataset
 
 
+
+if __name__ == "__main__":
+
+    # Test the prepare_data function
+    target = "trip_duration"
+    data_files = \
+    ['s3://air-example-data/ursa-labs-taxi-data/by_year/2019/05/data.parquet/359c21b3e28f40328e68cf66f7ba40e2_000000.parquet',
+    's3://air-example-data/ursa-labs-taxi-data/by_year/2019/06/data.parquet/ab5b9d2b8cc94be19346e260b543ec35_000000.parquet']
+    sample_locations = list(range(1, 21))
+    
+    #True: sample the data instead of using all of it
+    SMOKE_TEST = True 
+
+    if SMOKE_TEST:
+        data_files = data_files[0]
+        sample_locations = random.sample(sample_locations, 3)
+        
+    train_ds, valid_ds, test_ds = prepare_data(data_files, target, sample_locations)
+
+    print(f"Number rows train, test: ", end="")
+    print(f"{train_ds.count()}, {test_ds.count()}")
