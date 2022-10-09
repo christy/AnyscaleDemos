@@ -8,11 +8,13 @@ import pyarrow.dataset as pads
 import pandas as pd
 
 
-def pushdown_read_data(files_list: list) -> Dataset:
+def pushdown_read_data(files_list: list,
+                      sample_ids: list) -> Dataset:
     """Read data using projection (col selection) and row filter pushdown at parquet read-level. 
 
     Args:
         files_list (list): list of files
+        sample_ids (list): list of ids for sampling
 
     Returns:
         Dataset: Ray Dataset data
@@ -21,17 +23,14 @@ def pushdown_read_data(files_list: list) -> Dataset:
         (pads.field("passenger_count") > 0)
         & (pads.field("trip_distance") > 0)
         & (pads.field("fare_amount") > 0)
+        & (pads.field("pickup_location_id").isin(sample_ids))
     )
 
     the_dataset = ray.data.read_parquet(
         files_list,
         columns=[
             'pickup_at', 'dropoff_at',
-            'passenger_count', 'trip_distance', 'fare_amount', 
-            # might need these later for plotting, but drop for now
-            # 'pickup_longitude', 'pickup_latitude',
-            # 'dropoff_longitude', 'dropoff_latitude'
-                ], 
+            'passenger_count', 'trip_distance', 'fare_amount'], 
         filter=filter_expr,
     )
 
@@ -40,7 +39,11 @@ def pushdown_read_data(files_list: list) -> Dataset:
     return the_dataset
 
 def transform_batch(the_df: pd.DataFrame) -> pd.DataFrame:
-    """UDF function to transform a pandas dataframe
+    """UDF function to transform a pandas dataframe.
+        Calculates trip duration in seconds.
+        Drops rows with shorter than 1 minute trip duration.
+        Drops pickup/dropoff timestamps since not needed anymore
+        Fillna missing pickup_location_id
 
     Args:
         df (pd.DataFrame): input dataframe
@@ -48,9 +51,11 @@ def transform_batch(the_df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: updated dataframe
     """
-    df = the_df.copy()
-    df["trip_duration"] = (df["dropoff_at"] - df["pickup_at"]).dt.seconds
-    df = df[df["trip_duration"] >= 60]
+    df = the_df.copy()    
+    df["trip_duration"] = (df["dropoff_at"] - df["pickup_at"]).dt.seconds    
+    df = df[df["trip_duration"] >= 60]    
+    df.drop(["dropoff_at", "pickup_at"], axis=1, inplace=True)
+    df['pickup_location_id'] = df['pickup_location_id'].fillna(-1)
     return df
 
 def prepare_data(files_list: list, target: str) -> Tuple[Dataset, Dataset, Dataset]:
