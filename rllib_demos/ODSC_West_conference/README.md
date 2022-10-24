@@ -24,7 +24,7 @@ Ray version `2.0`, OpenAI Gym `0.21`, and supported Python `3.7, 3.8, and 3.9`.
 
 To make the time in class run more smoothly, <b>please email us before class so we can spin up a cloud cluster for you:</b>  christy@anyscale.com. <br>
 
-We will run the live tutorial on an Anyscale hosted environment which provides everything: slides, notebooks, data files, and all relevant Python packages will be installed on the cluster.  Just show up to class with your login credentials, which you will receive by email ahead of time.  <i>Make sure you email us ahead of time to get your credentials!</i>  <br>
+We will run the worshop on an Anyscale hosted environment which provides everything: slides, notebooks, data files, and all relevant Python packages will be installed on the cluster.  Just show up to class with your login credentials, which you will receive by email ahead of time.  <i>Make sure you email us ahead of time to get your credentials!</i>  <br>
 
 Also consider cloning or downloading this tutorial from the [Public github](https://github.com/anyscale/academy), 
 so you have a local copy of everything.
@@ -32,7 +32,7 @@ so you have a local copy of everything.
 <br>
 
 ## 💻 Setup instructions for local laptop
-This is *optional* if you want to install training material on your laptop at home,
+This is <b>*optional*</b> if you want to install training material on your laptop at home,
 after training is over.
 
 
