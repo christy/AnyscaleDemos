@@ -1,15 +1,15 @@
-# Welcome to the Anyscale ODSC West 2022 Tutorial 
+# Welcome to the Anyscale ODSC West 2022 Workshop 
 
 © 2019-2022, Anyscale. All Rights Reserved
 
 ![Anyscale Academy](../../images/AnyscaleAcademyLogo.png)
 
-Welcome to the ODSC West 2022 training tutorial on Ray, the system for scaling your 
+Welcome to the ODSC West 2022 training workshop on Ray, the system for scaling your 
 Python and AI/ML applications from a laptop to a cluster.
 <br>
 <br>
 
-## 📖 Tutorial Lessons
+## 📖 Workshop Lessons
 
 ## [Let's get Started Learning!](00_anyscale_acm_recsys_tutorial_table_of_contents.ipynb)
 
