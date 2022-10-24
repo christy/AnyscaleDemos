@@ -4,7 +4,7 @@
 
 ![Anyscale Academy](../../images/AnyscaleAcademyLogo.png)
 
-Welcome to the ACM RecSys 2022 training tutorial on Ray, the system for scaling your 
+Welcome to the ODSC West 2022 training tutorial on Ray, the system for scaling your 
 Python and AI/ML applications from a laptop to a cluster.
 <br>
 <br>
