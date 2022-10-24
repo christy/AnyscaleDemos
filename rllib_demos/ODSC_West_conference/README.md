@@ -1,4 +1,4 @@
-# Welcome to the Anyscale ACM RecSys 2022 Tutorial 
+# Welcome to the Anyscale ODSC West 2022 Tutorial 
 
 © 2019-2022, Anyscale. All Rights Reserved
 
