@@ -5,7 +5,7 @@
 
 These notebooks demonstrate how to use [Ray v2](https://docs.ray.io/en/latest/) for quick and easy distributed forecasting - a special case of multi-model training, tuning, inferencing, and prediction. You will learn how to convert existing code so it can run in parallel on multiple compute nodes.  The compute can be cores on your laptop or clusters in the cloud.
 
-Ray can be used with **any AI/ML Python library**!  But, specifically, we will demo:
+Ray can be used with **any AI/ML Python library**!  But, in these notebooks, we will demo:
 - [ARIMA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)
   - auto.arima() from [pmdarima](https://pypi.org/project/pyramid-arima/)
   - AutoARIMA() from [statsforecast](https://github.com/Nixtla/statsforecast)
@@ -14,15 +14,15 @@ Ray can be used with **any AI/ML Python library**!  But, specifically, we will d
 - [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/stable/) which uses [PyTorch Lightning](https://pytorch-lightning.readthedocs.io/en/latest/) and the [Ray plug-in for PyTorch Lightning](https://github.com/ray-project/ray_lightning?ref=pythonrepo.com).
   - We will try Google's [Temporal Fusion Transformer](https://github.com/google-research/google-research/tree/master/tft) which was implemented in PyTorch Forecasting.
 
-<br>
+
 
 ### 📖 Outline of Notebooks
 
-| Class| Notebook | Description
+| Module| Notebook | Description
 |:-----|:-----------|:----------------------------------------------------------|
 | 1  | [Batch training+tuning ARIMA+Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/batch_forecasting_arima_prophet.ipynb)| Multi-model training+tuning using AutoARIMA() and Prophet algorithms and Ray AIR APIs |
-| 2 | [Batch training+tuning+deployment Temporal Fusion Transformer](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/pytorch_forecasting.ipynb) | Multi-model larger models training+tuning+deployment using Google's Temporal Fusion Transformer algorithm in PyTorch Forecasting which uses Ray Lightning plug-in for Pytorch Lightning |
-| 3  | [Batch training using Ray v1](https://github.com/christy/AnyscaleDemos/tree/main/forecasting_demos/Ray_v1/ray_core)| Older versions of these notebooks using Ray v1. |
+| 2 | [Batch training+tuning+deployment Temporal Fusion Transformer](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/pytorch_forecasting.ipynb) | Multi-model larger models training+tuning+deployment using Google's Temporal Fusion Transformer algorithm in PyTorch Forecasting which uses Ray Lightning plug-in for Pytorch Lightning.  Deploy using Ray Serve. |
+| 3  | [Batch training using Ray v1](https://github.com/christy/AnyscaleDemos/tree/main/forecasting_demos/Ray_v1/ray_core)| Older versions of above notebooks using Ray v1. |
 
 
 
@@ -119,7 +119,7 @@ Anyscale default is to automatically shut down your cluster for you after 2 hour
 
 <br>
 
-## From now on, whenever you are ready to spin up a cluster, it will be quicker:
+## From now on, whenever you want to spin up a cluster, it will be quicker:
 <ul>
 <li>In your browser, open `console.anyscale.com`.  
 <li>Click on `Clusters` > `Created by me`. 
@@ -131,3 +131,6 @@ Anyscale default is to automatically shut down your cluster for you after 2 hour
 <br>
 
 🎓 To further speed up your development process (especially convenient if you are contributing to open-source Ray), use [Anyscale Workspaces](https://docs.anyscale.com/user-guide/develop-and-debug/workspaces#workspaces-tutorial), to develop directly on a cloud, instead of on your laptop!
+<br>
+
+Thanks for reading 😜 and let me know if you have any suggestions.  I'm happy to learn more from you!  
