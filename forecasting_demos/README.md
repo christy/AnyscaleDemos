@@ -55,8 +55,7 @@ To configure an Anyscale cluster `Configuration`, use the **[latest Ray](https:/
 <li>Click on `Configurations` > `Create a new environment`. 
 <li>Give the configuration a name example `myname-forecasting`.
 <li>Select a base docker image, example `anyscale/ray-ml:2.2.0-py38-gpu`.
-<li>Specify pip libraries in this order:
-
+<li>Specify `Pip packages` in this order:
 <ul>
 protobuf==3.19.* <br>
 Cython <br>
@@ -76,12 +75,12 @@ scipy<br>
 seaborn<br>
 torch<br>
 kats<br>
+For PyTorch Forecasting add these: <br>
 ray_lightning<br>
 pytorch-forecasting<br>
 mlflow<br>
 </ul>
-<br>
-<li>Specify conda libraries in this order:
+<li>For PyTorch Forecasting specify `Conda packages` in this order:
 <ul>
 tqdm<br>
 grpcio-tools<br>
@@ -89,17 +88,20 @@ tensorflow<br>
 tensorboard<br>
 tensorboardx<br>
 </ul>
-<br>
 <li>Put your github repo in the `Post build commands` section:
-
-If you have a project name:<br>
-> git clone your-git-repo-url ../your-project-name/<br>
-
-Otherwise if you do not have a project:<br>
-> git clone your-git-repo-url<br>
-
+   <ul>
+   <li>If you have a project name:
+      <ul>
+      <li>git clone your-git-repo-url ../your-project-name/
+      </ul>
+   <li>Otherwise if you do not have a project:
+      <ul>
+      <li>git clone your-git-repo-url
+      </ul>
+   </ul>
 <li>Click 'Create'.
 </ol>
+<img src="images/Anyscale_config.png" style="width: 50%"/>
 
 <br>
 
@@ -117,6 +119,8 @@ Otherwise if you do not have a project:<br>
 <li>Wait until the cluster is ready, then click `Jupyter` button.
 </ol>
 
+<img src="images/Anyscale_cluster_create.png" style="width: 50%"/>
+
 Anyscale default is to automatically shut down your cluster for you after 2 hours of inactivity.  That way you don't have to worry about accidentally leaving it running over a weekend.
 
 <br>
@@ -129,10 +133,12 @@ Anyscale default is to automatically shut down your cluster for you after 2 hour
 <li>Click `Start`.
 <li>Wait until the cluster is ready, then click `Jupyter` button.
 </ul>
+<img src="images/Anyscale_cluster_start.png" style="width: 50%"/>
 
 <br>
 
 🎓 To further speed up your development process (especially convenient if you are contributing to open-source Ray), use [Anyscale Workspaces](https://docs.anyscale.com/user-guide/develop-and-debug/workspaces#workspaces-tutorial), to develop directly on a cloud, instead of on your laptop!
+
 <br>
 
-Thanks for reading 😜 and let me know if you have any suggestions.  I'm happy to learn more from you!  
+Let's have fun 😜 and Thank you 🙏. 
