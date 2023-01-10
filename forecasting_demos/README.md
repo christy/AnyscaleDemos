@@ -121,7 +121,7 @@ tensorboardx<br>
 
 <img src="images/Anyscale_cluster_create.png" style="width: 50%"/>
 
-Anyscale default is to automatically shut down your cluster for you after 2 hours of inactivity.  That way you don't have to worry about accidentally leaving it running over a weekend.
+Anyscale by default will automatically shut down your cluster for you after 2 hours of inactivity.  That way you don't have to worry about accidentally leaving it running over a weekend.
 
 <br>
 
@@ -137,7 +137,7 @@ Anyscale default is to automatically shut down your cluster for you after 2 hour
 
 <br>
 
-🎓 To further speed up your development process (especially convenient if you are contributing to open-source Ray), use [Anyscale Workspaces](https://docs.anyscale.com/user-guide/develop-and-debug/workspaces#workspaces-tutorial), to develop directly on a cloud, instead of on your laptop!
+🎓 To further speed up your development process (especially convenient if you are contributing to open-source Ray), use [Anyscale Workspaces](https://docs.anyscale.com/user-guide/develop-and-debug/workspaces#workspaces-tutorial), to develop and save your code directly on a cloud, instead of on your laptop!
 
 <br>
 
