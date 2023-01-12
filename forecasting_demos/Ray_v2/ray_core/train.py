@@ -1,5 +1,4 @@
 # For reading from partitioned cloud storage paths.
-from smart_open import smart_open
 import pyarrow.dataset as pds
 import pyarrow.parquet as pq
 import pandas as pd
