@@ -22,10 +22,10 @@ Ray can be used with **any AI/ML Python library**!  But, in these notebooks, we 
 |:-----|:-----------|:----------------------------------------------------------|
 | 1  | [Batch training+tuning ARIMA+Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/batch_forecasting_arima_prophet.ipynb)| Multi-model training+tuning using AutoARIMA() and Prophet algorithms and Ray AIR APIs |
 | 2 | [Batch training+tuning+deployment Temporal Fusion Transformer](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/pytorch_forecasting.ipynb) | Multi-model larger models training+tuning+deployment using Google's Temporal Fusion Transformer algorithm in PyTorch Forecasting which uses Ray Lightning plug-in for Pytorch Lightning.  Deploy using Ray Serve. |
-| 3 | [Batch training ARIMA](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_arima_simple_SMALL_data.ipynb)| Multi-model training using AutoARIMA() and Ray Core. |
-| 4 | [Batch training Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_prophet_simple_SMALL_data.ipynb)| Multi-model training using Prophet and Ray Core. |
-| 5  | [Batch training using Ray v1](https://github.com/christy/AnyscaleDemos/tree/main/forecasting_demos/Ray_v1/ray_core)| Older versions of above notebooks using Ray Core v1. |
-
+| 3 | [Ray multiprocessing Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/train_blog.py)| Multi-model training using Ray Multiprocessing which is an easier replacement for Ray Core APIs. |
+| 4 | [Batch training ARIMA](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_arima_simple_SMALL_data.ipynb)| Multi-model training using AutoARIMA() and Ray Core. |
+| 5 | [Batch training Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_prophet_simple_SMALL_data.ipynb)| Multi-model training using Prophet and Ray Core. |
+| 6 | [Batch training using Ray v1](https://github.com/christy/AnyscaleDemos/tree/main/forecasting_demos/Ray_v1/ray_core)| Older versions of above notebooks using Ray Core v1. |
 
 
 <br>
@@ -44,7 +44,7 @@ These notebooks use the public NYC Taxi rides dataset.
 
 # 👩 Setup Instructions for Anyscale
 
-We recommend running Ray on [Anyscale](https://console.anyscale.com) to take full advantage of developing on a personal laptop, then quickly spinning up resources in a cloud to run your same laptop code on bigger compute resources.
+We recommend running Ray on [Anyscale](https://console.anyscale.com) to take full advantage of developing on a personal laptop, then quickly spinning up resources in a cloud to run your same laptop code on bigger compute resources. (Get the [invite code here](https://www.anyscale.com/signup))
 <br>
 
 To configure an Anyscale cluster `Configuration`, use the **[latest Ray](https://github.com/ray-project/ray)** (right now it is v2.2) on a **Python 3.8 ML** docker image, example `anyscale/ray-ml:2.2.0-py38-gpu`.  Don't worry, you can on-the-fly remove the GPU per cluster just before you spin one up, if you don't need expensive GPU.  'ml' docker image means standard ml libraries automatically installed, e.g. pandas, matplotlib.  Python3.8 is important!  Since, at the time of writing this, Prophet still has this dependency.
