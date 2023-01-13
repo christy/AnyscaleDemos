@@ -28,7 +28,6 @@ Ray can be used with **any AI/ML Python library**!  But, in these notebooks, we 
 | 6 | [Batch training using Ray v1](https://github.com/christy/AnyscaleDemos/tree/main/forecasting_demos/Ray_v1/ray_core)| Older versions of above notebooks using Ray Core v1. |
 
 
-
 <br>
   
 # Data
