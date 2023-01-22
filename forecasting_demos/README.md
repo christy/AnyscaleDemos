@@ -57,8 +57,8 @@ To configure an Anyscale cluster `Configuration`, use the **[latest Ray](https:/
 <li>Select a base docker image, example `anyscale/ray-ml:2.2.0-py38-gpu`.
 <li>Specify `Pip packages` in this order:
 <ul>
-protobuf==3.19.* <br>
-Cython <br>
+protobuf<br>
+Cython<br>
 numba<br>
 numpy==1.21.6<br>
 pystan==2.19.1.1<br>
@@ -70,10 +70,7 @@ scikit-learn<br>
 pyarrow==10.0.0<br>
 statsmodels<br>
 ax-platform<br>
-gpytorch<br>
-scipy<br>
 seaborn<br>
-torch<br>
 kats<br>
 For PyTorch Forecasting add these: <br>
 ray_lightning<br>
@@ -85,7 +82,6 @@ mlflow<br>
 tqdm<br>
 grpcio-tools<br>
 tensorflow<br>
-tensorboard<br>
 tensorboardx<br>
 </ul>
 <li>Put your github repo in the `Post build commands` section:
