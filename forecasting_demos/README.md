@@ -20,8 +20,8 @@ Ray can be used with **any AI/ML Python library**!  But, in these notebooks, we 
 
 | Module| Notebook | Description
 |:-----|:-----------|:----------------------------------------------------------|
-| 1  | [Batch training+tuning ARIMA+Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/batch_forecasting_arima_prophet.ipynb)| Multi-model training+tuning using AutoARIMA() and Prophet algorithms and Ray AIR APIs |
-| 2 | [Batch training+tuning+deployment Temporal Fusion Transformer](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/pytorch_forecasting.ipynb) | Multi-model larger models training+tuning+deployment using Google's Temporal Fusion Transformer algorithm in PyTorch Forecasting which uses Ray Lightning plug-in for Pytorch Lightning.  Deploy using Ray Serve. |
+| 1  | [Batch tuning ARIMA+Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/train_prophet_blog.ipynb)| Multi-model training+tuning using AutoARIMA() and Prophet algorithms and Ray AIR APIs |
+| 2 | [Batch tuning+deployment Temporal Fusion Transformer](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_air/pytorch_forecasting.ipynb) | Multi-model larger models training+tuning+deployment using Google's Temporal Fusion Transformer algorithm in PyTorch Forecasting which uses Ray Lightning plug-in for Pytorch Lightning.  Deploy using Ray Serve. |
 | 3 | [Ray multiprocessing Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/train_prophet_blog.ipynb)| Multi-model training using Ray Multiprocessing which is an easier replacement for Ray Core APIs. |
 | 4 | [Batch training ARIMA](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_arima_simple_SMALL_data.ipynb)| Multi-model training using AutoARIMA() and Ray Core. |
 | 5 | [Batch training Prophet](https://github.com/christy/AnyscaleDemos/blob/main/forecasting_demos/Ray_v2/ray_core/nyctaxi_prophet_simple_SMALL_data.ipynb)| Multi-model training using Prophet and Ray Core. |
