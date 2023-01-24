@@ -44,7 +44,7 @@ These notebooks use the public NYC Taxi rides dataset.
 
 # 👩 Setup Instructions for Anyscale
 
-We recommend running Ray on [Anyscale](https://console.anyscale.com) to take full advantage of developing on a personal laptop, then quickly spinning up resources in a cloud to run your same laptop code on bigger compute resources. (Get the [invite code here](https://www.anyscale.com/signup))
+We recommend running Ray on [Anyscale](https://console.anyscale.com) to take full advantage of developing on a personal laptop, then quickly spinning up resources in a cloud to run your same laptop code on bigger compute resources. (Get the [invite code here](https://www.anyscale.com/signup) and follow [the instructions](https://docs.anyscale.com/user-guide/develop-and-debug/workspaces#workspaces-tutorial)to set up with your cloud account.)
 <br>
 
 To configure an Anyscale cluster `Configuration`, use the **[latest Ray](https://github.com/ray-project/ray)** (right now it is v2.2) on a **Python 3.8 ML** docker image, example `anyscale/ray-ml:2.2.0-py38-gpu`.  Don't worry, you can on-the-fly remove the GPU per cluster just before you spin one up, if you don't need expensive GPU.  'ml' docker image means standard ml libraries automatically installed, e.g. pandas, matplotlib.  Python3.8 is important!  Since, at the time of writing this, Prophet still has this dependency.
